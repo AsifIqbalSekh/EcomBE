@@ -1,29 +1,13 @@
 version: 0.2
-
 phases:
-  install:
-    runtime-versions:
-      java: 21  # Ensures Java 21 is used by CodeBuild
-
-  pre_build:
-    commands:
-      - echo "Setting Java 21 as default..."
-      - export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
-      - export PATH=$JAVA_HOME/bin:$PATH
-      - echo "JAVA_HOME is set to: $JAVA_HOME"
-      - java -version
-      - mvn -version
-
   build:
     commands:
-      - echo "Building the application..."
+      - echo Packaging JAR file...
       - mvn clean package
-
   post_build:
     commands:
-      - echo "Build completed successfully."
-
+      - echo Build complete.
 artifacts:
   files:
-    - target/*.jar
+    - target/EcomBE.jar
   discard-paths: yes
