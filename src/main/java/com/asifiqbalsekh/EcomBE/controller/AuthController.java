@@ -162,6 +162,16 @@ public class AuthController {
 //        );
 //    }
 
+    @GetMapping("/test")
+    public ResponseEntity<SignUpResponseDTO>signOut() {
+
+        return ResponseEntity.ok().body(
+                new SignUpResponseDTO(
+                        "test","test@email.com","ok"
+                )
+        );
+    }
+
     @GetMapping("/userinfo")
     public ResponseEntity<UserInfoResponseDTO>userInfoDetails(Authentication authentication) {
         if(authentication==null){
