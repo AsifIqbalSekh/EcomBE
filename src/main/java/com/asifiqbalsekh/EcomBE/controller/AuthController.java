@@ -163,7 +163,7 @@ public class AuthController {
 //    }
 
     @GetMapping("/test")
-    public ResponseEntity<SignUpResponseDTO>signOut() {
+    public ResponseEntity<SignUpResponseDTO>healthEndpoint() {
 
         return ResponseEntity.ok().body(
                 new SignUpResponseDTO(
@@ -175,7 +175,7 @@ public class AuthController {
     @GetMapping("/userinfo")
     public ResponseEntity<UserInfoResponseDTO>userInfoDetails(Authentication authentication) {
         if(authentication==null){
-            throw new APIException("User Not Signed In-v1");
+            throw new APIException("User Not Signed In");
         }
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         List<String> roles = userDetails.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList();
