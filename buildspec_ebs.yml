@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      java: corretto21
+  build:
+    commands:
+      - java --version
+      - mvn --version
+      - echo Packaging JAR file...
+      - mvn clean package
+  post_build:
+    commands:
+      - echo Build complete.
+artifacts:
+  files:
+    - target/EcomBE.jar
+  discard-paths: yes
