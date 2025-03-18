@@ -167,7 +167,7 @@ public class AuthController {
 
         return ResponseEntity.ok().body(
                 new SignUpResponseDTO(
-                        "test","test@email.com","ok"
+                        "test","test@email.com","CI-CD Check ok"
                 )
         );
     }
