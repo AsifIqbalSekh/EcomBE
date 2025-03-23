@@ -11,6 +11,19 @@ This is a backend service for an E-commerce application built using **Java, Spri
 - **Cloud Technology** AWS EBS or ECS, Docker
 - **API Testing:** Postman Collection
 
+## Features Implements:
+
+- Comprehensive CRUD Operations for categories, products, users, carts, and orders.
+- JWT-Based Authentication & Role Management to secure API endpoints.
+- Product & Category Management with search and filtering capabilities.
+- Shopping Cart System supporting product additions, quantity updates, and deletions.
+- Order Processing Workflow for placing and tracking user orders.
+- User Address Management for storing and retrieving multiple addresses.
+- Custom Error Handling to gracefully manage request failures.
+- File Handling to manage product images and other media assets.
+- Logging & Monitoring to track API usage and requests.
+- Deployment configuration to AWS EBS & ECS using Docker
+
 ##  Setup & Installation
 
 ### Prerequisites
